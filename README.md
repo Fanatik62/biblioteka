@@ -201,6 +201,7 @@
         }
     }
 }
+```
 
 Таким же образом создаём хранилища для оставшихся классов, после чего создаём общее хранилище (листинг 4):
 
@@ -217,6 +218,7 @@ namespace biblioteka.Repository
         public static readonly PaymentStorage PaymentStorage = new();
     }
 }
+```
 
 ***
 
