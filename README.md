@@ -100,7 +100,13 @@
 
 <p align="center">
 <img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/DFD.PNG?raw=true"></p>
-<p align="center">Рисунок 1 - UseCase диаграмма</p>
+<p align="center">Рисунок 2 - DFD диаграмма</p>
+
+Последней диаграммой является ER, где показана, как сущности связанный между с собой в этой ИС.
+
+<p align="center">
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/ER.PNG?raw=true"></p>
+<p align="center">Рисунок 3 - ER диаграмма</p>
 
 ..........
 
