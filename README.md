@@ -217,6 +217,7 @@ namespace biblioteka.Repository
         public static readonly PaymentStorage PaymentStorage = new();
     }
 }
+
 ***
 
 ## Заключение <a name="заключение"></a>
