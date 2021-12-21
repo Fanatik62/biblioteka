@@ -111,7 +111,112 @@
 ..........
 
 ## 3.2 Этап реализации <a name="реализация"></a>
-..........
+На основе ER-диаграммы создадим класс с указанием полей, параметров и типов данных для каждой сущности. 
+Приведём пример создания класса для сущности Librarian (листинг 1):
+
+Листинг 1 - Класс "Библиотекарь"
+```C# 
+    public class Librerian
+    {
+        public int IDlibrarian { get; set; }
+        public string FullName { get; set; }
+    }
+```
+
+Таким же создадим классы для книги, клиента, заказа и оплаты.
+
+Далее для каждой сущности создаём контроллеры с методами Create, Read, Update, Delite. П
+Приведём пример создания контроллера для сущности Librarian (листинг 2):
+
+Листинг 2 - Контроллер класса "Библиотекарь"
+```csharp 
+{
+    [ApiController]
+    [Route("/librarian")]
+    public class LibrarianController : ControllerBase
+    {
+        [HttpPut]
+        public Librarian Create(Librarian librarian)
+        {
+            Storage.LibrarianStorage.Create(librarian);
+            return librarian;
+        }
+
+        [HttpGet]
+        public Librarian Read(int librarianId)
+        {
+            return Storage.LibrarianStorage.ReadlLibrarianId);
+        }
+
+        [HttpPost]
+        public Librarian Update(int librarianId, Librarian newlibrarian)
+        {
+            return Storage.LibrarianStorage.Update(librarianId, newlibrarian);
+        }
+
+        [HttpDelete]
+        public bool Delete(int librarianId)
+        {
+            return Storage.LibrarianStorage.DeletelibrarianId); ;
+        }
+    }
+}
+```
+Таким же образом создаём контроллеры для оставшихся классов.
+
+Затем создаём хранилище для каждого класса. Пример создания хранилища для класса Admin (листинг 3):
+
+Листинг 3 - Хранилище класса "Администратор"
+```csharp
+    public class LibrarianStorage
+    {
+        private Dictionary<int, Librarian> Librarians { get; } = new Dictionary<int, Librarian>();
+        //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
+        //public LibrarianStorage() => Connection.Open();
+
+        public void Create(Librarian librarian)
+        {
+            Librarians.Add(librarian.LibrarianId, librarian);
+            //var command = Connection.CreateCommand();
+            //command.CommandText = "SELECT * FROM .....";
+            //command.ExecuteNonQuery
+            //command.ExecuteReader
+            //command.ExecuteScalar
+        }
+
+        public Librarian Read(int librarianId)
+        {
+            return Librarians[librarianId];
+        }
+
+        public Librarian Update(int librarianId, Librarian newlibrarian)
+        {
+            Librarians[librarianId] = newlibrarian;
+            return Librarians[librarianId];
+        }
+
+        public bool Delete(int librarianId)
+        {
+            return Librarians.Remove(librarianId);
+        }
+    }
+}
+
+Таким же образом создаём хранилища для оставшихся классов, после чего создаём общее хранилище (листинг 4):
+
+Листинг 4 - Общее хранилище
+```csharp
+namespace biblioteka.Repository
+{
+    public static class Storage
+    {
+        public static readonly BookStorage BookStorage = new();
+        public static readonly ClientStorage ClientStorage = new();
+        public static readonly LibrarianStorage LibrarianStorage = new();
+        public static readonly OrderStorage OrderdStorage = new();
+        public static readonly PaymentStorage PaymentStorage = new();
+    }
+}
 ***
 
 ## Заключение <a name="заключение"></a>
