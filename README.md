@@ -93,7 +93,7 @@
 Разработка начинается с описания главных лиц информационной системы. В моему случае это: администратор, библиотекарь и гость сайта
 
 <p align="center">
-<img src="https://github.com/Fanatik62/biblioteka/blob/99b25f675b4536ab573b06955bb5cccb35e899cc/Diagrams/use-case.drawio"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/USE-CASE.png?raw=true"></p>
 <p align="center">Рисунок 1 - UseCase диаграмма</p>
 ..........
 
