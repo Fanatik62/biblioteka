@@ -95,6 +95,13 @@
 <p align="center">
 <img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/USE-CASE.png?raw=true"></p>
 <p align="center">Рисунок 1 - UseCase диаграмма</p>
+
+Далее на основе USE-CASE создается DFD диагрмаа, где показаны действия участников данной информационной среды.
+
+<p align="center">
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/DFD.PNG?raw=true"></p>
+<p align="center">Рисунок 1 - UseCase диаграмма</p>
+
 ..........
 
 ## 3.2 Этап реализации <a name="реализация"></a>
