@@ -228,6 +228,10 @@ namespace biblioteka.Repository
 ***
 ## Список использованных источников <a name="ссылки"></a>
 
+Для разработке данной информационной системы использовались эти ресурсы:
+
+https://app.diagrams.net
+
 https://litnet.com
 
 https://litnet.com
