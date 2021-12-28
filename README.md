@@ -136,7 +136,7 @@ namespace library.Domain
 }
 ```
 
-Таким же создается классы для книги, клиента, заказа и оплаты.
+Таким же создается классы для библиотекоря, клиента, заказа и оплаты.
 
 Далее для каждой сущности создается контроллеры с методами Create, Read, Update, Delite.
 
@@ -195,15 +195,15 @@ using System.Data.SqlClient;
 
 namespace library.Repository
 {
-    public class LibrarianStorage
+    public class BookStorage
     {
-        private Dictionary<int, Librarian> Librarians { get; } = new Dictionary<int, Librarian>();
+        private Dictionary<int, Book> Books { get; } = new Dictionary<int, Book>();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
-        //public LibrarianStorage() => Connection.Open();
+        //public BookStorage() => Connection.Open();
 
-        public void Create(Librarian librarian)
+        public void Create(Book book)
         {
-            Librarians.Add(librarian.LibrarianId, librarian);
+            Books.Add(book.BookId, book);
             //var command = Connection.CreateCommand();
             //command.CommandText = "SELECT * FROM .....";
             //command.ExecuteNonQuery
@@ -211,20 +211,20 @@ namespace library.Repository
             //command.ExecuteScalar
         }
 
-        public Librarian Read(int librarianId)
+        public Book Read(int bookId)
         {
-            return Librarians[librarianId];
+            return Books[bookId];
         }
 
-        public Librarian Update(int librarianId, Librarian newLibrarian)
+        public Book Update(int bookId, Book newBook)
         {
-            Librarians[librarianId] = newLibrarian;
-            return Librarians[librarianId];
+            Books[bookId] = newBook;
+            return Books[bookId];
         }
 
-        public bool Delete(int librarianId)
+        public bool Delete(int bookId)
         {
-            return Librarians.Remove(librarianId);
+            return Books.Remove(bookId);
         }
     }
 }
