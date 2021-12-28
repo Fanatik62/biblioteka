@@ -119,52 +119,64 @@
 ## 3.2 Этап реализации <a name="реализация"></a>
 
 На основе ER-диаграммы создается класс с указанием полей, параметров и типов данных для каждой сущности. 
-Пример создания класса для сущности Librarian (листинг 1):
+Пример создания класса для сущности Book (листинг 1):
 
-Листинг 1 - Класс "Библиотекарь"
+Листинг 1 - Класс "Книга"
 ```C# 
-    public class Librerian
+using System;
+
+namespace library.Domain
+{
+    public class Book
     {
-        public int IDlibrarian { get; set; }
-        public string FullName { get; set; }
+        public int BookId { get; set; }
+        public string Author { get; set; }
+        public DateTime DateOfAction { get; set; }
+        public string Genre { get; set; }
     }
+}
 ```
 
 Таким же создается классы для книги, клиента, заказа и оплаты.
 
 Далее для каждой сущности создаедтся контроллеры с методами Create, Read, Update, Delite.
-Пример создания контроллера для сущности Librarian (листинг 2):
+Пример создания контроллера для сущности Book (листинг 2):
 
-Листинг 2 - Контроллер класса "Библиотекарь"
+Листинг 2 - Контроллер класса "Книга"
 ```csharp 
+using library.Domain;
+using library.Repository;
+using Microsoft.AspNetCore.Mvc;
+
+namespace library.Controllers
 {
     [ApiController]
-    [Route("/librarian")]
-    public class LibrarianController : ControllerBase
+    [Route("/book")]
+    public class BookController : ControllerBase
     {
         [HttpPut]
-        public Librarian Create(Librarian librarian)
+        public Book Create(Book book)
         {
-            Storage.LibrarianStorage.Create(librarian);
-            return librarian;
+            Storage.BookStorage.Create(book);
+            return book;
         }
 
         [HttpGet]
-        public Librarian Read(int librarianId)
+        public Book Read(int bookId)
         {
-            return Storage.LibrarianStorage.ReadlLibrarianId);
+            return Storage.BookStorage.Read(bookId);
         }
 
         [HttpPost]
-        public Librarian Update(int librarianId, Librarian newlibrarian)
+        public Book Update(int bookId, Book newBook)
         {
-            return Storage.LibrarianStorage.Update(librarianId, newlibrarian);
+            return Storage.BookStorage.Update(bookId, newBook);
         }
 
         [HttpDelete]
-        public bool Delete(int librarianId)
+        public bool Delete(int bookId)
         {
-            return Storage.LibrarianStorage.DeletelibrarianId); ;
+            return Storage.BookStorage.Delete(bookId); ;
         }
     }
 }
@@ -172,10 +184,16 @@
 Таким же образом создаётся контроллеры для оставшихся классов.
 
 Затем создаедтся хранилище для каждого класса. 
-Примерр создания хранилища для класса Librarian (листинг 3):
+Примерр создания хранилища для класса Book (листинг 3):
 
-Листинг 3 - Хранилище класса "Библиотекарь"
+Листинг 3 - Хранилище класса "Книга"
 ```csharp
+using library.Domain;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+
+namespace library.Repository
+{
     public class LibrarianStorage
     {
         private Dictionary<int, Librarian> Librarians { get; } = new Dictionary<int, Librarian>();
@@ -197,9 +215,9 @@
             return Librarians[librarianId];
         }
 
-        public Librarian Update(int librarianId, Librarian newlibrarian)
+        public Librarian Update(int librarianId, Librarian newLibrarian)
         {
-            Librarians[librarianId] = newlibrarian;
+            Librarians[librarianId] = newLibrarian;
             return Librarians[librarianId];
         }
 
@@ -215,18 +233,17 @@
 
 Листинг 4 - Общее хранилище
 ```csharp
-namespace biblioteka.Repository
+namespace library.Repository
 {
     public static class Storage
     {
         public static readonly BookStorage BookStorage = new();
         public static readonly ClientStorage ClientStorage = new();
         public static readonly LibrarianStorage LibrarianStorage = new();
-        public static readonly OrderStorage OrderdStorage = new();
+        public static readonly OrderStorage OrderStorage = new();
         public static readonly PaymentStorage PaymentStorage = new();
     }
 }
-
 ```
 ## 4 Тестирование информационной системы <a name="тестирование"></a>
 
