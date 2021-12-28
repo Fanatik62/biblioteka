@@ -235,84 +235,84 @@ namespace biblioteka.Repository
 <img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/4.png?raw=true"></p>
 <p align="center">Рисунок 4 - Cтраница Swagger UI</p> 
 
-Проверка работы методов CRUD (Create - создание, Read - чтение, Update - обновление, Delete - удаление) в сущности Admin (рисунок 5).
+Проверка работы методов CRUD (Create - создание, Read - чтение, Update - обновление, Delete - удаление) в сущности Book (рисунок 5).
 <p align="center">
-<img src="https://github.com/yuliapyrikova/pyrikova/blob/main/ph/5.png?raw=true"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/5.png?raw=true"></p>
 <p align="center">Рисунок 5 - Проверка работы методов CRUD</p> 
 
 1. Create позволяет добавлять новые строки в вашу таблицу (рисунок 6).
 <p align="center">
-<img src="https://github.com/yuliapyrikova/pyrikova/blob/main/ph/6.png?raw=true"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/6.png?raw=true"></p>
 <p align="center">Рисунок 6 - Окно метода создания</p> 
 
-Ввод необходимых данных об администраторе в соответствующие поля (рисунок 7).
+Ввод необходимых данных о книге в соответствующие поля (рисунок 7).
 <p align="center">
-<img src="https://github.com/yuliapyrikova/pyrikova/blob/main/ph/7.png?raw=true"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/7.png?raw=true"></p>
 <p align="center">Рисунок 7 - Работа с методом создания</p> 
 
 После успешного выполнения операции сервер выдаёт ответ (рисунок 8).
 <p align="center">
-<img src="https://github.com/yuliapyrikova/pyrikova/blob/main/ph/8.png?raw=true"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/8.png?raw=true"></p>
 <p align="center">Рисунок 8 - Результат выполнения операции создания</p> 
 
 2. Функция чтения Read похожа на функцию поиска, так как позволяет извлекать определенные записи и считывать их значения (рисунок 9).
 <p align="center">
-<img src="https://github.com/yuliapyrikova/pyrikova/blob/main/ph/9.png?raw=true"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/9.png?raw=true"></p>
 <p align="center">Рисунок 9 - Окно функции чтения</p> 
 
-Считывание информации об уже созданном админе по его Id (рисунок 10).
+Считывание информации о созданной книге по его Id (рисунок 10).
 <p align="center">
-<img src="https://github.com/yuliapyrikova/pyrikova/blob/main/ph/10.png?raw=true"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/10.png?raw=true"></p>
 <p align="center">Рисунок 10 - Работа с методом чтения</p> 
 
-После выполнения операции сервер выдаёт об админе информацию, которая была создана в Create (рисунок 11).
+После выполнения операции сервер выдаёт о книге информацию, которая была создана в Create (рисунок 11).
 <p align="center">
-<img src="https://github.com/yuliapyrikova/pyrikova/blob/main/ph/11.png?raw=true"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/11.png?raw=true"></p>
 <p align="center">Рисунок 11 - Результат выполнения операции чтения</p> 
 
 3. Функция редактирования записи Update используется для изменения существующих записей в базе данных (рисунок 12).
 <p align="center">
-<img src="https://github.com/yuliapyrikova/pyrikova/blob/main/ph/12.png?raw=true"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/12.png?raw=true"></p>
 <p align="center">Рисунок 12 - Окно метода обновления</p> 
 
-Измениение информации об админе, для этого сначала нужно ввести его номер и затем новые данные (рисунок 13).
+Изменение информации о книге, для этого сначала нужно ввести её номер и затем новые данные (рисунок 13).
 <p align="center">
-<img src="https://github.com/yuliapyrikova/pyrikova/blob/main/ph/13.png?raw=true"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/13.png?raw=true"></p>
 <p align="center">Рисунок 13 - Работа с методом обновления</p> 
 
-После выполнения операции сервер выдаёт новую информацию о том же админе (рисунок 14).
+После выполнения операции сервер выдаёт новую информацию о той же книге (рисунок 14).
 <p align="center">
-<img src="https://github.com/yuliapyrikova/pyrikova/blob/main/ph/14.png?raw=true"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/14.png?raw=true"></p>
 <p align="center">Рисунок 14 - Результат выполнения операции обновления</p> 
 
-Функцией Read проверяется вышеуказанная операция. После срабатывания сервер выдает новую информацию об админе (рисунок 15).
+Функцией Read проверяется вышеуказанная операция. После срабатывания сервер выдает новую информацию о книге (рисунок 15).
 <p align="center">
-<img src="https://github.com/yuliapyrikova/pyrikova/blob/main/ph/15.png?raw=true"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/15.png?raw=true"></p>
 <p align="center">Рисунок 15 - Результат выполнения операции чтения после обновления данных</p> 
 
 4. Функция Delete используется для удаления записи по Id. Если операция удаления сработает успешно, то ответ сервера будет "true", в противном случае "false" (рисунок 16).
 <p align="center">
-<img src="https://github.com/yuliapyrikova/pyrikova/blob/main/ph/16.png?raw=true"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/16.png?raw=true"></p>
 <p align="center">Рисунок 16 - Окно метода удаления</p> 
 
-Удаление админа по его Id (рисунок 17).
+Удаление книги по его Id (рисунок 17).
 <p align="center">
-<img src="https://github.com/yuliapyrikova/pyrikova/blob/main/ph/17.png?raw=true"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/17.png?raw=true"></p>
 <p align="center">Рисунок 17 - Работа с методом удаления</p> 
 
 После выполнения операции ответ сервера (рисунок 18).
 <p align="center">
-<img src="https://github.com/yuliapyrikova/pyrikova/blob/main/ph/18.png?raw=true"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/18.png?raw=true"></p>
 <p align="center">Рисунок 18 - Результат выполнения метода удаления</p> 
 
-Проверка вышеописанного действия с помощью Read, считывание информацию об удалённом админе (рисунок 19).
+Проверка вышеописанного действия с помощью Read, считывание информацию об удалённой книге (рисунок 19).
 <p align="center">
-<img src="https://github.com/yuliapyrikova/pyrikova/blob/main/ph/19.png?raw=true"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/19.png?raw=true"></p>
 <p align="center">Рисунок 19 - Работа с операцией чтения</p> 
 
-После срабатывания программа не выдаёт информации об этом админе (рисунок 20).
+После срабатывания программа не выдаёт информации об этой книге (рисунок 20).
 <p align="center">
-<img src="https://github.com/yuliapyrikova/pyrikova/blob/main/ph/20.png?raw=true"></p>
+<img src="https://github.com/Fanatik62/biblioteka/blob/main/photo/20.png?raw=true"></p>
 <p align="center">Рисунок 20 - Результат выполнения операции чтения после удаления данных</p>
 
 ***
